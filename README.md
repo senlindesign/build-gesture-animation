@@ -1,10 +1,10 @@
 # Build Gesture Animation · 手势动画网站生成 Skill
 
-[![GitHub stars](https://img.shields.io/github/stars/senlindesign/build-gesture-animation?style=flat&color=111111)](https://github.com/senlindesign/build-gesture-animation/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-white.svg)](LICENSE.txt)
-[![Agent Skill](https://img.shields.io/badge/Agent_Skill-compatible-111111.svg)](https://agentskills.io/)
-[![Codex](https://img.shields.io/badge/OpenAI-Codex-111111.svg)](https://openai.com/codex/)
-[![Claude Code](https://img.shields.io/badge/Anthropic-Claude_Code-111111.svg)](https://www.anthropic.com/claude-code)
+[![GitHub stars](https://img.shields.io/github/stars/senlindesign/build-gesture-animation?style=flat-square&logo=github&label=Stars&color=f5c542)](https://github.com/senlindesign/build-gesture-animation/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2f80ed?style=flat-square)](LICENSE.txt)
+[![Agent Skill](https://img.shields.io/badge/Agent_Skill-compatible-22a06b?style=flat-square)](https://agentskills.io/)
+[![Codex](https://img.shields.io/badge/OpenAI-Codex-111111?style=flat-square&logo=openai)](https://openai.com/codex/)
+[![Claude Code](https://img.shields.io/badge/Anthropic-Claude_Code-d97757?style=flat-square)](https://www.anthropic.com/claude-code)
 
 [English README](README.en.md)
 
@@ -17,11 +17,11 @@
 → 响应式网站 → 自动校验 → localhost 预览
 ```
 
-## 演示
+## 🎬 演示
 
 https://github.com/user-attachments/assets/d9d79b90-3c65-4718-89aa-e9d92c6ad14f
 
-## 30 秒开始
+## ⚡ 30 秒开始
 
 安装：
 
@@ -44,7 +44,7 @@ npx skills add https://github.com/senlindesign/build-gesture-animation \
 一尊大理石雕像从完整状态连续碎裂成石块，之后我要把它做成手势动画。
 ```
 
-## 能做什么
+## ✨ 能做什么
 
 - 检查视频路径、可解码性、时长、尺寸、旋转信息和真实帧数
 - 默认均匀选择 60 个源帧，可配置为 24–120 帧
@@ -59,7 +59,7 @@ npx skills add https://github.com/senlindesign/build-gesture-animation \
 - 验证素材编号、尺寸、解码、配置引用和 MediaPipe 模型地址
 - 建立项目 Task 和 Memory，逐阶段保存决策与验证证据
 
-## 四种控制方式
+## 🖐️ 四种控制方式
 
 | 控制 | 输入 | 典型用法 |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ npx skills add https://github.com/senlindesign/build-gesture-animation \
 
 每个控制都支持 `invert`，用于决定动作方向与动画首尾帧的关系。
 
-## 为什么使用图片序列
+## 🖼️ 为什么使用图片序列
 
 浏览器视频的随机定位容易受关键帧间隔、解码延迟和设备差异影响。这个 Skill 将视频转成连续 WebP 帧，让手势值可以直接对应目标画面，并提供：
 
@@ -82,7 +82,7 @@ npx skills add https://github.com/senlindesign/build-gesture-animation \
 
 它保留 60 帧的细节，但不会加入人为的追帧延迟。
 
-## 适合 / 不适合
+## 🎯 适合 / 不适合
 
 **适合：**
 
@@ -100,7 +100,7 @@ npx skills add https://github.com/senlindesign/build-gesture-animation \
 - 自定义人体姿态模型或自定义 landmark 公式
 - 自动部署到 Vercel 或其他云平台
 
-## 系统要求
+## 🧰 系统要求
 
 - Python 3.9+
 - FFmpeg 和 ffprobe
@@ -122,7 +122,7 @@ brew install ffmpeg
 
 Skill 只负责检测并给出提示，不会擅自安装系统依赖。
 
-## 安装
+## 📦 安装
 
 ### 方式一：Skills CLI
 
@@ -177,7 +177,7 @@ python3 scripts/install_skill.py \
   --project-root /absolute/path/project
 ```
 
-## 工作流程
+## 🔄 工作流程
 
 Agent 会按以下阶段执行，并在每个 Gate 后更新 Task 与 Memory：
 
@@ -192,7 +192,7 @@ Agent 会按以下阶段执行，并在每个 Gate 后更新 Task 与 Memory：
 
 详细规则见 [SKILL.md](SKILL.md)。
 
-## 配置
+## ⚙️ 配置
 
 生成项目只使用一个 `project.config.json`：
 
@@ -224,7 +224,7 @@ Agent 会按以下阶段执行，并在每个 Gate 后更新 Task 与 Memory：
 }
 ```
 
-## 脚本
+## 🛠️ 脚本
 
 | 脚本 | 作用 |
 | --- | --- |
@@ -247,7 +247,7 @@ python3 scripts/validate_project.py /absolute/path/project
 python3 scripts/serve_site.py /absolute/path/project
 ```
 
-## 平台支持
+## 🤖 平台支持
 
 | 平台 | 状态 | 安装位置 |
 | --- | --- | --- |
@@ -258,7 +258,7 @@ python3 scripts/serve_site.py /absolute/path/project
 
 核心包遵循 [Agent Skills 开放规范](https://agentskills.io/specification)，不依赖单一客户端专属语法。
 
-## 目录结构
+## 📁 目录结构
 
 ```text
 build-gesture-animation/
@@ -274,7 +274,7 @@ build-gesture-animation/
 
 Skill 不包含示例视频、用户素材或生成后的帧文件。
 
-## 隐私与安全
+## 🔒 隐私与安全
 
 - 手势和面部 landmark 只在浏览器中实时处理
 - 不将摄像头画面或生物识别信息写入 Task、Memory 或配置
@@ -282,7 +282,7 @@ Skill 不包含示例视频、用户素材或生成后的帧文件。
 - 源视频不会被删除或覆盖
 - 替换现有输出和 Skill 安装需要显式 `--force`
 
-## FAQ
+## ❓ FAQ
 
 **为什么默认是 60 帧？**  
 60 帧能保留足够细腻的中间状态。快速动作通过预加载和连续显示改善，不通过固定降到 36 帧解决。
@@ -299,6 +299,6 @@ Skill 不包含示例视频、用户素材或生成后的帧文件。
 **会自动部署网站吗？**  
 不会。首版只生成并验证本地网站。
 
-## License
+## 📄 License
 
 [MIT License](LICENSE.txt)

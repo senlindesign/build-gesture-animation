@@ -1,10 +1,10 @@
 # Build Gesture Animation · Gesture-Controlled Animation Website Skill
 
-[![GitHub stars](https://img.shields.io/github/stars/senlindesign/build-gesture-animation?style=flat&color=111111)](https://github.com/senlindesign/build-gesture-animation/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-white.svg)](LICENSE.txt)
-[![Agent Skill](https://img.shields.io/badge/Agent_Skill-compatible-111111.svg)](https://agentskills.io/)
-[![Codex](https://img.shields.io/badge/OpenAI-Codex-111111.svg)](https://openai.com/codex/)
-[![Claude Code](https://img.shields.io/badge/Anthropic-Claude_Code-111111.svg)](https://www.anthropic.com/claude-code)
+[![GitHub stars](https://img.shields.io/github/stars/senlindesign/build-gesture-animation?style=flat-square&logo=github&label=Stars&color=f5c542)](https://github.com/senlindesign/build-gesture-animation/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2f80ed?style=flat-square)](LICENSE.txt)
+[![Agent Skill](https://img.shields.io/badge/Agent_Skill-compatible-22a06b?style=flat-square)](https://agentskills.io/)
+[![Codex](https://img.shields.io/badge/OpenAI-Codex-111111?style=flat-square&logo=openai)](https://openai.com/codex/)
+[![Claude Code](https://img.shields.io/badge/Anthropic-Claude_Code-d97757?style=flat-square)](https://www.anthropic.com/claude-code)
 
 [中文 README](README.md)
 
@@ -17,11 +17,11 @@ Video or prompt → video inspection → uniform frame selection → 4:3 WebP
 → gesture configuration → responsive website → validation → localhost preview
 ```
 
-## Demo
+## 🎬 Demo
 
 https://github.com/user-attachments/assets/d9d79b90-3c65-4718-89aa-e9d92c6ad14f
 
-## 30-second start
+## ⚡ 30-second start
 
 Install:
 
@@ -45,7 +45,7 @@ statue continuously shattering from an intact form into debris. I will turn it
 into a gesture-controlled animation afterward.
 ```
 
-## What it does
+## ✨ What it does
 
 - Inspects video paths, decoding, duration, dimensions, rotation, and real frame count
 - Uniformly selects 60 source frames by default, configurable from 24 to 120
@@ -60,7 +60,7 @@ into a gesture-controlled animation afterward.
 - Validates numbering, dimensions, decoding, configuration, and MediaPipe references
 - Creates project Tasks and Memory with decisions and gate evidence
 
-## Four control modes
+## 🖐️ Four control modes
 
 | Control | Input | Typical use |
 | --- | --- | --- |
@@ -71,7 +71,7 @@ into a gesture-controlled animation afterward.
 
 Every control supports `invert`, which determines how the body movement maps to the first and last animation frames.
 
-## Why image sequences
+## 🖼️ Why image sequences
 
 Browser video seeking is affected by keyframe spacing, decoding latency, and device differences. This Skill converts the video into continuous WebP frames so the gesture value can address a specific visual state while retaining:
 
@@ -83,7 +83,7 @@ Browser video seeking is affected by keyframe spacing, decoding latency, and dev
 
 It preserves the detail of 60 frames without adding artificial frame-following delay.
 
-## Fits / Does not fit
+## 🎯 Fits / Does not fit
 
 **Fits:**
 
@@ -101,7 +101,7 @@ It preserves the detail of 60 frames without adding artificial frame-following d
 - custom pose models or custom landmark formulas
 - automatic Vercel or cloud deployment
 
-## Requirements
+## 🧰 Requirements
 
 - Python 3.9+
 - FFmpeg and ffprobe
@@ -123,7 +123,7 @@ brew install ffmpeg
 
 The Skill only detects missing system dependencies and provides guidance. It does not install them without permission.
 
-## Install
+## 📦 Install
 
 ### Option 1: Skills CLI
 
@@ -176,7 +176,7 @@ python3 scripts/install_skill.py \
   --project-root /absolute/path/project
 ```
 
-## Workflow
+## 🔄 Workflow
 
 The agent follows these stages and updates Task and Memory after every gate:
 
@@ -191,7 +191,7 @@ The agent follows these stages and updates Task and Memory after every gate:
 
 See [SKILL.md](SKILL.md) for the complete workflow.
 
-## Configuration
+## ⚙️ Configuration
 
 Each generated project uses one `project.config.json`:
 
@@ -223,7 +223,7 @@ Each generated project uses one `project.config.json`:
 }
 ```
 
-## Scripts
+## 🛠️ Scripts
 
 | Script | Purpose |
 | --- | --- |
@@ -246,7 +246,7 @@ python3 scripts/validate_project.py /absolute/path/project
 python3 scripts/serve_site.py /absolute/path/project
 ```
 
-## Platform support
+## 🤖 Platform support
 
 | Platform | Status | Installation path |
 | --- | --- | --- |
@@ -257,7 +257,7 @@ python3 scripts/serve_site.py /absolute/path/project
 
 The core package follows the [open Agent Skills specification](https://agentskills.io/specification) and does not depend on client-specific prompt syntax.
 
-## Directory
+## 📁 Directory
 
 ```text
 build-gesture-animation/
@@ -273,7 +273,7 @@ build-gesture-animation/
 
 The Skill contains no sample videos, user media, or generated frame sequences.
 
-## Privacy and safety
+## 🔒 Privacy and safety
 
 - Hand and face landmarks are processed live in the browser
 - Camera frames and biometric signals are never written to Task, Memory, or config
@@ -281,7 +281,7 @@ The Skill contains no sample videos, user media, or generated frame sequences.
 - Source videos are never deleted or overwritten
 - Replacing existing outputs or installed Skills requires explicit `--force`
 
-## FAQ
+## ❓ FAQ
 
 **Why 60 frames by default?**  
 Sixty frames preserve detailed intermediate states. Fast movement is handled through preloading and progressive display, not by permanently reducing the sequence to 36 frames.
@@ -298,6 +298,6 @@ The animation holds its last frame. Re-entry creates a new calibration baseline 
 **Does it deploy the website?**  
 No. The first version generates and validates a local website only.
 
-## License
+## 📄 License
 
 [MIT License](LICENSE.txt)
