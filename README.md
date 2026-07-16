@@ -17,6 +17,10 @@
 → 响应式网站 → 自动校验 → localhost 预览
 ```
 
+## 演示
+
+https://github.com/user-attachments/assets/d9d79b90-3c65-4718-89aa-e9d92c6ad14f
+
 ## 30 秒开始
 
 安装：

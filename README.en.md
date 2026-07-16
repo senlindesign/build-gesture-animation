@@ -17,6 +17,10 @@ Video or prompt → video inspection → uniform frame selection → 4:3 WebP
 → gesture configuration → responsive website → validation → localhost preview
 ```
 
+## Demo
+
+https://github.com/user-attachments/assets/d9d79b90-3c65-4718-89aa-e9d92c6ad14f
+
 ## 30-second start
 
 Install:
