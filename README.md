@@ -8,6 +8,8 @@
 
 [English README](README.en.md)
 
+Inspired by **[Marina Budarina](https://x.com/marina_uiux)**
+
 一个面向 Codex、Claude Code、Cursor 和 GitHub Copilot 的 Agent Skill，将一段连续变化的视频转换为可用手掌、双指、双手距离或嘴巴开合控制的交互式动画网站。
 
 它把完整制作流程固化为可验证的工作流：

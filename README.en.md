@@ -8,6 +8,8 @@
 
 [中文 README](README.md)
 
+Inspired by **[Marina Budarina](https://x.com/marina_uiux)**
+
 An Agent Skill for Codex, Claude Code, Cursor, and GitHub Copilot that turns a continuous transformation video into an interactive animation website controlled by a palm, pinch, two-hand span, or mouth movement.
 
 It packages the full production process into a verifiable workflow:
