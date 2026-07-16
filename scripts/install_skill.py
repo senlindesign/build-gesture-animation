@@ -19,7 +19,12 @@ PERSONAL_TARGETS = {
 
 
 def ignored(_: str, names: list[str]) -> set[str]:
-    return {name for name in names if name == "__pycache__" or name.endswith((".pyc", ".pyo"))}
+    ignored_names = {".git", ".DS_Store", "__pycache__"}
+    return {
+        name
+        for name in names
+        if name in ignored_names or name.endswith((".pyc", ".pyo"))
+    }
 
 
 def destination_for(target: str, project_root: Path | None) -> Path:
