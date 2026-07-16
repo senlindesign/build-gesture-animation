@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Gesture Animation"
+  short_description: "Build gesture-controlled animation websites"
+  default_prompt: "Use $build-gesture-animation to turn a video into a local gesture-controlled animation website."

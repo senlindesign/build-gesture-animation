@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030303" />
+    <title>Gesture Animation</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="ambientBackground" class="ambient-background" aria-hidden="true"></canvas>
+
+    <main class="stage" aria-label="Gesture animation collection">
+      <section class="interface-panel" aria-label="Animation controls">
+        <header class="site-header">
+          <h1 id="siteTitle" class="site-title"></h1>
+          <p id="siteSubtitle" class="site-subtitle"></p>
+        </header>
+
+        <nav id="controlTabs" class="control-tabs" aria-label="Interaction mode"></nav>
+        <p id="modeInstruction" class="mode-instruction"></p>
+
+        <section id="cameraPanel" class="camera-panel" aria-label="Gesture tracking camera">
+          <div id="dragHandle" class="camera-chrome">
+            <span id="statusText" class="status-text" aria-live="polite">Allow camera</span>
+            <span class="gesture-meter" aria-hidden="true" hidden>
+              <span id="gestureFill" class="gesture-fill"></span>
+            </span>
+          </div>
+          <div class="camera-stage">
+            <video id="webcam" class="webcam" autoplay muted playsinline></video>
+            <canvas id="overlay" class="overlay"></canvas>
+          </div>
+          <button id="retryButton" class="retry-button" type="button" hidden>Retry</button>
+        </section>
+      </section>
+
+      <section class="visual-panel" aria-label="Animation collection" tabindex="0">
+        <div id="artworkStack" class="artwork-stack" aria-live="polite"></div>
+
+        <div class="artwork-switcher" aria-label="Animation selection controls">
+          <button id="previousArtwork" class="stack-arrow" type="button" aria-label="Previous animation">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 14 5-5 5 5" /></svg>
+          </button>
+          <div id="artworkRail" class="artwork-rail" role="slider" tabindex="0"
+            aria-label="Selected animation" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1">
+            <span id="artworkThumb" class="artwork-thumb"></span>
+          </div>
+          <span id="artworkCounter" class="artwork-counter" aria-live="polite">01 / 01</span>
+          <button id="nextArtwork" class="stack-arrow" type="button" aria-label="Next animation">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div id="gestureCursor" class="gesture-cursor" aria-hidden="true"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

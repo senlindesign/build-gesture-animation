@@ -1,0 +1,25 @@
+{
+  "site": {
+    "title": "Kinetic Atlas",
+    "subtitle": "Body-driven animations"
+  },
+  "artworks": [
+    {
+      "id": "earth",
+      "label": "Earth",
+      "framePath": "./frames/earth",
+      "frameCount": 60
+    }
+  ],
+  "controls": [
+    {
+      "type": "palm",
+      "invert": false,
+      "instruction": "Open and close your palm."
+    }
+  ],
+  "navigation": {
+    "verticalSwipe": true,
+    "loop": true
+  }
+}
